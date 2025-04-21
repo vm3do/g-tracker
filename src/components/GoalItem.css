@@ -4,6 +4,8 @@
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .goal-header {
@@ -11,16 +13,19 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 15px;
+  flex-wrap: wrap;
 }
 
 .goal-header h3 {
   margin: 0;
   color: #333;
+  font-size: 18px;
 }
 
 .goal-actions {
   display: flex;
   gap: 10px;
+  margin-top: 10px;
 }
 
 .edit-button,
@@ -86,13 +91,16 @@
 .progress-form {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .progress-form input {
   flex: 1;
+  min-width: 120px;
   padding: 8px;
   border: 1px solid #ddd;
   border-radius: 4px;
+  box-sizing: border-box;
 }
 
 .progress-form button {
@@ -103,8 +111,38 @@
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.2s;
+  white-space: nowrap;
 }
 
 .progress-form button:hover {
   background-color: #357abd;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .goal-item {
+    padding: 25px;
+  }
+  
+  .goal-header {
+    flex-wrap: nowrap;
+  }
+  
+  .goal-actions {
+    margin-top: 0;
+  }
+  
+  .goal-header h3 {
+    font-size: 20px;
+  }
+  
+  .progress-form {
+    flex-wrap: nowrap;
+  }
+}
+
+@media (min-width: 1024px) {
+  .goal-item {
+    padding: 30px;
+  }
 }
