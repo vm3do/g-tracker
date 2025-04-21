@@ -6,13 +6,7 @@
   margin-bottom: 15px;
   width: 100%;
   box-sizing: border-box;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.goal-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
 .goal-header {
@@ -104,7 +98,7 @@
 
 .progress-bar {
   height: 12px;
-  background: linear-gradient(90deg, #f0f0f0 0%, #e0e0e0 100%);
+  background: #f0f0f0;
   border-radius: 6px;
   overflow: hidden;
   margin-bottom: 10px;
@@ -114,39 +108,7 @@
 .progress-fill {
   height: 100%;
   background: linear-gradient(90deg, #4a90e2 0%, #357abd 100%);
-  transition: width 0.5s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.progress-fill::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-    45deg,
-    rgba(255, 255, 255, 0.2) 25%,
-    transparent 25%,
-    transparent 50%,
-    rgba(255, 255, 255, 0.2) 50%,
-    rgba(255, 255, 255, 0.2) 75%,
-    transparent 75%,
-    transparent
-  );
-  background-size: 20px 20px;
-  animation: progress-animation 1s linear infinite;
-}
-
-@keyframes progress-animation {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 20px 0;
-  }
+  transition: width 0.3s ease;
 }
 
 .progress-text {
@@ -170,6 +132,7 @@
   box-sizing: border-box;
   transition: all 0.3s ease;
   font-size: 14px;
+  color: #333;
 }
 
 .progress-form input:focus {
