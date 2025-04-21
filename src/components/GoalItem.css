@@ -1,0 +1,110 @@
+.goal-item {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+.goal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.goal-header h3 {
+  margin: 0;
+  color: #333;
+}
+
+.goal-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-button,
+.delete-button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.edit-button {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.delete-button {
+  background-color: #e25c5c;
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: #357abd;
+}
+
+.delete-button:hover {
+  background-color: #c74a4a;
+}
+
+.goal-details {
+  margin-bottom: 15px;
+  color: #666;
+}
+
+.goal-details p {
+  margin: 5px 0;
+}
+
+.progress-section {
+  margin-bottom: 15px;
+}
+
+.progress-bar {
+  height: 10px;
+  background-color: #eee;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #4a90e2;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  font-size: 14px;
+  color: #666;
+}
+
+.progress-form {
+  display: flex;
+  gap: 10px;
+}
+
+.progress-form input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.progress-form button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.progress-form button:hover {
+  background-color: #357abd;
+}
