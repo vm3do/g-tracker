@@ -79,20 +79,24 @@ function App() {
           
           <h2>Your Goals</h2>
           <div className="goals-list">
-            {goals.map(goal => {
-              const today = new Date().toISOString().split('T')[0];
-              const currentProgress = progress[today]?.[goal.id] || 0;
-              
-              return (
-                <GoalItem
-                  key={goal.id}
-                  goal={goal}
-                  progress={currentProgress}
-                  onUpdate={handleUpdateProgress}
-                  onDelete={handleDeleteGoal}
-                />
-              );
-            })}
+            {goals.length > 0 ? (
+              goals.map(goal => {
+                const today = new Date().toISOString().split('T')[0];
+                const currentProgress = progress[today]?.[goal.id] || 0;
+                
+                return (
+                  <GoalItem
+                    key={goal.id}
+                    goal={goal}
+                    progress={currentProgress}
+                    onUpdate={handleUpdateProgress}
+                    onDelete={handleDeleteGoal}
+                  />
+                );
+              })
+            ) : (
+              <p className="no-goals">No goals yet. Add your first fitness goal above!</p>
+            )}
           </div>
         </section>
       </main>
